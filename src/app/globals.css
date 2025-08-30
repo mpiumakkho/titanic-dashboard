@@ -1,0 +1,90 @@
+@import "antd/dist/reset.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-prompt), Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Modern subtle card hover */
+.ant-card:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  transition: box-shadow 200ms ease;
+}
+
+/* Make correlation table rows readable on hover */
+.correlation-row:hover > td {
+  background: rgba(22, 119, 255, 0.06) !important;
+}
+
+/* Ensure first cell is not black (override unexpected theme styles) */
+.correlation-table .ant-table-tbody > tr > td {
+  background: transparent;
+}
+.correlation-table .ant-table-tbody > tr:hover > td {
+  background: rgba(22, 119, 255, 0.06) !important;
+}
+/* Fix black header row */
+.correlation-table .ant-table-thead > tr > th {
+  background: transparent !important;
+  color: var(--foreground) !important;
+}
+
+/* Use Bai Jamjuree for headings and key UI headings */
+h1, h2, h3, h4, h5, h6,
+.ant-card-head-title,
+.ant-statistic-title,
+.ant-tabs-tab-btn {
+  font-family: var(--font-prompt), Arial, Helvetica, sans-serif;
+}
+/* Ensure Ant Typography titles also use Bai */
+.ant-typography h1,
+.ant-typography h2,
+.ant-typography h3,
+.ant-typography h4,
+.ant-typography h5 {
+  font-family: var(--font-prompt), Arial, Helvetica, sans-serif;
+}
+
+/* Scale typography: body +2 steps, main title +4 steps */
+body {
+  font-size: 18px; /* base +2 */
+}
+.ant-typography,
+.ant-card,
+.ant-tabs,
+.ant-statistic,
+.ant-table,
+.ant-form,
+.ant-input,
+.ant-select,
+.ant-btn {
+  font-size: 18px;
+}
+
+/* Main page title "Titanic Dashboard" */
+.page-main-title {
+  font-size: 48px; /* larger (approx +4 from default ~32px) */
+  line-height: 1.2;
+}
