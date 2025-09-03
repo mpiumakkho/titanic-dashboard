@@ -14,6 +14,8 @@ Single-page interactive dashboard for the Titanic dataset. Upload the provided C
 - Charts: Survival by Sex, Survival by Class, Age Distribution
 - Per-card comment sections with add/edit/delete (stored in localStorage)
 
+  **ลองใช้งานได้ที่นี่: [Titanic Dashboard](https://titanic-dashboard.vercel.app)**
+
 ### Getting Started
 1. Install dependencies
 ```bash
